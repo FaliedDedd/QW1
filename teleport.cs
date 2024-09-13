@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class teleport : MonoBehaviour
 {
    public RawImage guiText;
-    public int n_scene = 2;  // индекс загружаемой сцены по умолчанию, который в редакторе можно изменить
+    public int n_scene = 2;  
 
-   void OnTriggerEnter(Collider col)  // вход в коллайдер-триггер объекта-двери или телепорта
+   void OnTriggerEnter(Collider col)  
    {
-      if (col.tag.Equals("Player"))        // если это объект с тегом "Player"
+      if (col.tag.Equals("Player"))       
       {
-         SceneManager.LoadScene(n_scene);  // загружаем сцену с заданным индексомS
+         SceneManager.LoadScene(n_scene);
         guiText.enabled = true;
 
       }
